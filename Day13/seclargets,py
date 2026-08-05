@@ -1,0 +1,17 @@
+numbers=list(map(int,input("enter numbers: ").split()))
+def second_largest(numbers):
+    if len(numbers) < 2:
+        return None  
+    largest = numbers[0]
+    for num in numbers[1:]:
+        if num > largest:
+            largest = num
+    second_largest = numbers[0]
+    for num in numbers[1:]:
+        if num > second_largest and num < largest:
+            second_largest = num
+    return second_largest
+print(second_largest(numbers))
+
+
+
